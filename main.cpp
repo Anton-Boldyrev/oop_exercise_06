@@ -5,19 +5,18 @@
 #include <map>
 #include <string>
 
-
 int main() {
 	containers::TStack<TRectangle<int>, my_allocator<TRectangle<int>, 500>> s;
 	std::string cmd;
 	int index;
-	std::cout << "ps - to push figure to stack\n"
-			  << "i  - to insert figure to stack\n"
-			  << "p  - to pop figure from Stack\n"
-			  << "e  - to delete figure from Stack\n"
-			  << "t  - to show first figure\n"
-			  << "f  - to print figures\n"
-			  << "m  - to show work allocator with map\n"
-			  << "ex - to finish execution of program\n";
+	std::cout << "ps - to push figure to stack \n"
+			  << "i  - to insert figure to stack \n"
+			  << "p  - to pop figure from Stack \n"
+			  << "e  - to delete figure from Stack \n"
+			  << "t  - to show first figure \n"
+			  << "f  - to print figures \n"
+			  << "m  - to show work allocator with map \n"
+			  << "ex - to finish execution of program \n";
 	while (true) {
 		std::cin >> cmd;
 		if (cmd == "ps") {
@@ -74,7 +73,6 @@ int main() {
 				std::cout << err.what() << std::endl;
 				continue;
 			}
-		
 		} else if (cmd == "t") {
 			try {
 				s.top();
@@ -98,8 +96,6 @@ int main() {
 			std::cout << "Wrong comand\n";
 			continue;
 		}
-
 	}
-	
 }
 
